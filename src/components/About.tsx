@@ -23,7 +23,7 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="rounded-xl overflow-hidden relative h-[32rem] w-full group">
             <img 
-              src="person.jpeg" 
+              src="https://github.com/sahkanu34/new_react_portfolio/blob/main/images/person.jpeg?raw=true" 
               alt="Professional portrait" 
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
