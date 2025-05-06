@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
                 INNOVATION THROUGH AI & MACHINE LEARNING
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                <span className="block mb-2">Hello, I'm a</span>
+                <span className="block mb-2">Hello, I'm Suraj </span>
                 <div className="min-h-[3rem] text-teal-600 dark:text-teal-400">
                   <span className="inline-block transition-all duration-300 ease-out">
                     {displayText}
@@ -79,9 +79,9 @@ const Hero: React.FC = () => {
             {/* <div className="pt-6">
               <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">Trusted by organizations worldwide</p>
               <div className="flex flex-wrap gap-8 opacity-70 dark:opacity-50">
-                <img src="https://images.pexels.com/photos/11304716/pexels-photo-11304716.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Company logo" className="h-8 object-contain" />
-                <img src="https://images.pexels.com/photos/11304717/pexels-photo-11304717.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Company logo" className="h-8 object-contain" />
-                <img src="https://images.pexels.com/photos/11304718/pexels-photo-11304718.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Company logo" className="h-8 object-contain" />
+                <img src="https://www.naamii.org.np/wp-content/uploads/2023/02/naamii_logo.svg" alt="Company logo" className="h-8 object-contain" />
+                <img src="https://cdn.prod.website-files.com/66310a6d9862bf126bd9dfe7/66310a6d9862bf126bd9e02a_securitypal%20logo.svg" alt="Company logo" className="h-8 object-contain" />
+                <img src="https://www.lftechnology.com/images/lf-logo.svg" alt="Company logo" className="h-8 object-contain" />
               </div>
             </div> */}
           </div>
