@@ -86,11 +86,20 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
       </div>
 
       {/* Mobile Menu */}
-      <div
-        className={`fixed inset-0 bg-white dark:bg-slate-900 z-40 transition-transform duration-300 ease-in-out transform ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden pt-24 px-8`}
-      >
+            <div
+              className={`fixed inset-0 bg-white dark:bg-slate-900 z-50 transition-transform duration-300 ease-in-out transform ${
+                isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+              } md:hidden pt-24 px-8`}
+            >
+        <div className="absolute top-4 right-4">
+          <button
+            onClick={closeMenu}
+            aria-label="Close Menu"
+            className="p-2 text-slate-800 dark:text-slate-200"
+          >
+            <X size={24} />
+          </button>
+        </div>
         <nav className="flex flex-col space-y-8">
           {navLinks.map((link) => (
             <a
