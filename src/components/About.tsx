@@ -64,7 +64,7 @@ const About: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold">Machine Learning</h4>
-                    <p className="text-sm text-slate-600 dark:text-slate-400">Classification & Regressions</p>
+                    <p className="text-sm text-slate-600 dark:text-slate-400">Supervised & Unsupervised Learning</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
