@@ -5,8 +5,8 @@ const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
   const phrases = [
-    'Machine Learning Engineer',
-    'AI Ethusiast',
+    'Machine Learning Developer',
+    'AI Enthusiast',
     'Data Analyst',
   ];
   const [phraseIndex, setPhraseIndex] = useState(0);
