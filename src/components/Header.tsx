@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, HomeIcon,} from 'lucide-react';
+import { Menu, X, Sun, Moon, HomeIcon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 interface HeaderProps {
@@ -14,7 +14,7 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
     { title: 'About', href: '#about' },
     { title: 'Skills', href: '#skills' },
     { title: 'Projects', href: '#projects' },
-    { title: 'Education', href: '#Education' },
+    { title: 'Education', href: '#education' },
     { title: 'Contact', href: '#contact' },
   ];
 
@@ -86,11 +86,11 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
       </div>
 
       {/* Mobile Menu */}
-            <div
-              className={`fixed inset-0 bg-white dark:bg-slate-900 z-50 transition-transform duration-300 ease-in-out transform ${
-                isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-              } md:hidden pt-24 px-8`}
-            >
+      <div
+        className={`fixed inset-0 bg-white dark:bg-slate-900 z-50 transition-transform duration-300 ease-in-out transform ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        } md:hidden pt-24 px-8`}
+      >
         <div className="absolute top-4 right-4">
           <button
             onClick={closeMenu}

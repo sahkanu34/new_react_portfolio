@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Database, Server, Code, Cpu, BarChart, GitBranch, Globe, Terminal, GitCompare, SwatchBook, BarChartBigIcon } from 'lucide-react';
+import { Brain, Database, Server, Code, Cpu, BarChart, GitBranch, Globe, Terminal, GitCompare, SwatchBook, BarChartBigIcon, Flame, Layers } from 'lucide-react';
 
 const Skills: React.FC = () => {
   const skillCategories = [
@@ -7,22 +7,22 @@ const Skills: React.FC = () => {
       title: "AI & Machine Learning",
       icon: <Brain size={24} className="text-teal-500" />,
       skills: [
-        { name: "TensorFlow", icon: <Brain size={16} className="text-teal-500" /> },
-        { name: "PyTorch", icon: <Brain size={16} className="text-teal-500" /> },
-        { name: "Scikit-Learn", icon: <Brain size={16} className="text-teal-500" /> },
-        { name: "Keras", icon: <Brain size={16} className="text-teal-500" /> },
-        { name: "Colab", icon: <Terminal size={16} className="text-teal-500" /> },
-        { name: "Streamlit", icon: <Brain size={16} className="text-teal-500" /> },
+        { name: "TensorFlow", icon: <BarChart size={16} className="text-teal-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+        { name: "Keras", icon: <Code size={16} className="text-teal-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" },
+        { name: "PyTorch", icon: <Flame size={16} className="text-teal-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
+        { name: "Scikit-Learn", icon: <BarChartBigIcon size={16} className="text-teal-500" />, image: "https://icon.icepanel.io/Technology/svg/scikit-learn.svg" },
+        { name: "Google Colab", icon: <Terminal size={16} className="text-teal-500" />, image: "https://colab.google/static/images/icons/colab.png" },
+        { name: "Streamlit", icon: <Server size={16} className="text-teal-500" />, image: "https://icon.icepanel.io/Technology/svg/Streamlit.svg" },
       ]
     },
     {
       title: "Databases & Big Data",
       icon: <Database size={24} className="text-blue-500" />,
       skills: [
-        { name: "MySQL", icon: <Database size={16} className="text-blue-500" /> },
-        { name: "Postgresql", icon: <Database size={16} className="text-blue-500" /> },
-        { name: "SQlite", icon: <Database size={16} className="text-blue-500" /> },
-        { name: "Mongodb", icon: <Database size={16} className="text-blue-500" /> },
+        { name: "MySQL", icon: <Database size={16} className="text-blue-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+        { name: "Postgresql", icon: <Database size={16} className="text-blue-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+        { name: "SQlite", icon: <Database size={16} className="text-blue-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" },
+        { name: "Mongodb", icon: <Database size={16} className="text-blue-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
         // { name: "Cassandra", icon: <Database size={16} className="text-blue-500" /> },
       ]
     },
@@ -30,10 +30,10 @@ const Skills: React.FC = () => {
       title: "Programming Languages",
       icon: <Code size={24} className="text-purple-500" />,
       skills: [
-        { name: "Python", icon: <Code size={16} className="text-purple-500" /> },
-        { name: "C", icon: <Code size={16} className="text-purple-500" /> },
-        { name: "Java", icon: <Code size={16} className="text-purple-500" /> },
-        { name: "C#", icon: <Code size={16} className="text-purple-500" /> },
+        { name: "Python", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "C", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+        { name: "Java", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+        { name: "C#", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
         // { name: "JavaScript", icon: <Code size={16} className="text-purple-500" /> },
       ]
     },
@@ -41,37 +41,37 @@ const Skills: React.FC = () => {
       title: "Specialized",
       icon: <Cpu size={24} className="text-amber-500" />,
       skills: [
-        { name: "Machine Learning", icon: <Cpu size={16} className="text-amber-500" /> },
-        { name: "Deep Learning", icon: <Brain size={16} className="text-amber-500" /> },
-        { name: "Dashboards", icon: <BarChart size={16} className="text-amber-500" /> },
-        { name: "Data Analaytics", icon: <BarChartBigIcon size={16} className="text-amber-500" /> },
-        { name: "MLOps", icon: <GitBranch size={16} className="text-amber-500" /> },
+        { name: "Machine Learning", icon: <Cpu size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Deep Learning", icon: <Layers size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Dashboards", icon: <BarChart size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Data Analytics", icon: <BarChartBigIcon size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "MLOps", icon: <GitBranch size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       ]
     },
     {
-      title: "Tools & Platforms",
+      title: "Tools & Technologies",
       icon: <Globe size={24} className="text-emerald-500" />,
       skills: [
-        { name: "Docker", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "Kubernetes", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "Jenkins", icon: <GitCompare size={16} className="text-emerald-500" /> },
-        { name: "Git", icon: <Server size={16} className="text-emerald-500" /> },
-        { name: "GitHub", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "PyCharm", icon: <Terminal size={16} className="text-emerald-500" /> },
-        { name: "Jupyter", icon: <Terminal size={16} className="text-emerald-500" /> },
+        { name: "Jupyter Notebook", icon: <Terminal size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+        { name: "PyCharm", icon: <Terminal size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" },
+        { name: "Docker", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+        { name: "Kubernetes", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+        { name: "Jenkins", icon: <GitCompare size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
+        { name: "Git", icon: <Server size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "GitHub", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
       ]
     },
     {
       title: "Frameworks & Libraries",
       icon: <SwatchBook size={24} className="text-emerald-500" />,
       skills: [
-        { name: "Django", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "flask", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "Numpy", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "Pandas", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "Matplotlib", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "Plotly", icon: <Globe size={16} className="text-emerald-500" /> },
-        { name: "Bootstrap", icon: <Globe size={16} className="text-emerald-500" /> },
+        { name: "FastAPI", icon: <Globe size={16} className="text-emerald-500" />, image: "https://icon.icepanel.io/Technology/svg/FastAPI.svg" },
+        // { name: "flask", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
+        { name: "Numpy", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
+        { name: "Pandas", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
+        { name: "Matplotlib", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" },
+        { name: "Plotly", icon: <Globe size={16} className="text-emerald-500" />, image: "https://icon.icepanel.io/Technology/svg/Ploty.svg" },
+        { name: "Bootstrap", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
       ]
     },
   ];
@@ -91,21 +91,16 @@ const Skills: React.FC = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="group relative bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-teal-300 dark:hover:border-teal-500"
+              className="group relative bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700"
             >
-              <div className="absolute -top-5 left-6 w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-900 rounded-lg shadow border border-slate-200 dark:border-slate-700 group-hover:bg-teal-50 dark:group-hover:bg-teal-900/20 transition-colors duration-300">
-                {category.icon}
-              </div>
               <h3 className="text-xl font-bold mb-4 mt-2">{category.title}</h3>
               <div className="space-y-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div 
                     key={skillIndex} 
-                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700/50 transition-colors duration-200"
+                    className="flex items-center gap-3 p-2 rounded-lg"
                   >
-                    <div className="p-2 bg-slate-100 dark:bg-slate-700 rounded-lg">
-                      {skill.icon}
-                    </div>
+                    <img src={skill.image} alt={skill.name} className="w-6 h-6 object-contain rounded" />
                     <span className="text-slate-700 dark:text-slate-300 font-medium">{skill.name}</span>
                   </div>
                 ))}
@@ -129,7 +124,7 @@ const Skills: React.FC = () => {
             </div>
             <a 
               href="#contact" 
-              className="px-6 py-3 bg-white text-teal-600 font-medium rounded-lg hover:bg-slate-100 transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1"
+              className="px-6 py-3 bg-white text-teal-600 font-medium rounded-lg shadow-md"
             >
               Contact Me
             </a>

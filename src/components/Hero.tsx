@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight} from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
@@ -75,15 +75,6 @@ const Hero: React.FC = () => {
                 View Projects
               </a>
             </div>
-            
-            {/* <div className="pt-6">
-              <p className="text-sm text-slate-600 dark:text-slate-400 mb-3">Trusted by organizations worldwide</p>
-              <div className="flex flex-wrap gap-8 opacity-70 dark:opacity-50">
-                <img src="https://www.naamii.org.np/wp-content/uploads/2023/02/naamii_logo.svg" alt="Company logo" className="h-8 object-contain" />
-                <img src="https://cdn.prod.website-files.com/66310a6d9862bf126bd9dfe7/66310a6d9862bf126bd9e02a_securitypal%20logo.svg" alt="Company logo" className="h-8 object-contain" />
-                <img src="https://www.lftechnology.com/images/lf-logo.svg" alt="Company logo" className="h-8 object-contain" />
-              </div>
-            </div> */}
           </div>
           
           <div className="w-full md:w-1/2 relative">

@@ -9,7 +9,6 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
 
-
 function App() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -33,7 +32,9 @@ function App() {
           <About />
           <Skills />
           <Projects />
-          <Education />
+          <section id="education">
+            <Education />
+          </section>
           <Contact />
         </main>
         <Footer />
