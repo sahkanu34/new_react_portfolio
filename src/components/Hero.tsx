@@ -79,15 +79,15 @@ const Hero: React.FC = () => {
           
           <div className="w-full md:w-1/2 relative">
             <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden ring-4 ring-teal-500/20 dark:ring-teal-400/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-blue-500/20 dark:from-teal-500/10 dark:to-blue-500/10 z-10"></div>
               <img 
-                src="https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                src="github_profile.jpg" 
                 alt="AI Illustration" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-teal-500/30 dark:bg-teal-500/20 rounded-full blur-2xl"></div>
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-blue-500/30 dark:bg-blue-500/20 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 bg-teal-600 dark:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+              Available for Work
+            </div>
           </div>
         </div>
       </div>
