@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
           <div className="w-full md:w-1/2 relative">
             <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden ring-4 ring-teal-500/20 dark:ring-teal-400/20">
               <img 
-                src="github_profile.jpg" 
+                src="https://github.com/sahkanu34/new_react_portfolio/blob/main/github_profile.jpg?raw=true"
                 alt="AI Illustration" 
                 className="w-full h-full object-cover"
               />
