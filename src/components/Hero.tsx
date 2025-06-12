@@ -4,8 +4,12 @@ import { ArrowRight} from 'lucide-react';
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
   const phrases = [
     'Machine Learning Developer',
+    'Deep Learning Engineer',
+    // 'AI Researcher',
+    // 'Research Scientist',
     'AI Enthusiast',
     'Data Analyst',
   ];
@@ -40,8 +44,8 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4">
       <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="w-full md:w-1/2 space-y-6 md:space-y-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-24">
+          <div className="w-full md:w-1/2 space-y-6 md:space-y-8 md:ml-16">
             <div className="space-y-3">
               <p className="text-teal-600 dark:text-teal-400 font-medium tracking-wide">
                 INNOVATION THROUGH AI & MACHINE LEARNING
@@ -77,12 +81,18 @@ const Hero: React.FC = () => {
             </div>
           </div>
           
-          <div className="w-full md:w-1/2 relative">
-            <div className="relative w-64 h-64 mx-auto rounded-full overflow-hidden ring-4 ring-teal-500/20 dark:ring-teal-400/20">
+          <div className="w-full md:w-1/2 relative md:mr-16">
+            <div 
+              className={`relative w-72 h-72 mx-auto rounded-full overflow-hidden ring-4 ring-teal-500/20 dark:ring-teal-400/20 transition-all duration-300 transform ${
+                isHovered ? 'scale-105 rotate-2' : 'scale-100'
+              }`}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <img 
                 src="https://github.com/sahkanu34/new_react_portfolio/blob/main/github_profile.jpg?raw=true"
                 alt="AI Illustration" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 bg-teal-600 dark:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">

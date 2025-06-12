@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, HomeIcon } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 
 interface HeaderProps {
@@ -11,6 +11,7 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
   const { isDarkMode, toggleTheme } = useTheme();
   
   const navLinks = [
+    { title: 'Home', href: '#home' },
     { title: 'About', href: '#about' },
     { title: 'Skills', href: '#skills' },
     { title: 'Projects', href: '#projects' },
@@ -41,9 +42,10 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#" className="flex items-center text-2xl font-bold tracking-tight">
-          <HomeIcon size={24} className="mr-2 text-slate-800 dark:text-slate-200" />
-          {/* <span className="text-teal-600 dark:text-teal-400">icon:</span> */}
+        <a href="#home" className="text-2xl font-bold tracking-tight text-slate-800 dark:text-slate-200">
+          <span className="bg-gradient-to-r from-teal-500 to-blue-500 bg-clip-text text-transparent font-cursive">
+            Suraj Sah Kanu
+          </span>
         </a>
 
         {/* Desktop Navigation */}
