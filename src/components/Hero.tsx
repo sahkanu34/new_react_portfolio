@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
   }, [animateText]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-24">
           <div className="w-full md:w-1/2 space-y-6 md:space-y-8 md:ml-16">

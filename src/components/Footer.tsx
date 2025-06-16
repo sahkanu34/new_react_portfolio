@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-slate-900 text-white py-12 px-4">
+    <footer className="bg-gradient-to-b from-slate-900 to-slate-800 text-white py-12 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center mb-8">
           <div className="mb-6 md:mb-0">

@@ -77,7 +77,7 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 bg-slate-50 dark:bg-slate-900">
+    <section id="skills" className="py-20 px-4 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
       <div className="container mx-auto">
         <div className="flex flex-col gap-4 mb-12 items-center text-center">
           <p className="text-teal-600 dark:text-teal-400 font-medium tracking-wide">MY EXPERTISE</p>

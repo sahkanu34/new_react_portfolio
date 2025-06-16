@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
     <header 
       className={`fixed w-full px-4 py-4 md:py-5 transition-all duration-300 z-50 ${
         scrollY > 10 
-          ? 'bg-white/90 dark:bg-slate-900/90 backdrop-blur-md shadow-sm' 
+          ? 'bg-gradient-to-b from-white/90 to-slate-50/90 dark:from-slate-900/90 dark:to-slate-800/90 backdrop-blur-md shadow-sm' 
           : 'bg-transparent'
       }`}
     >
