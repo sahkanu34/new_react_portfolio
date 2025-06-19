@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
       id: 1,
       title: "HealthGuide Assistant AI",
       description: "An AI-powered health assistant built using AWS Bedrock's Party Rock, deployed on an AWS server to provide real-time health guidance and support.",
-      image: "images/bot_ai.jpeg", // Placeholder AWS Bedrock logo, replace with actual if available
+      image: "https://ideogram.ai/assets/image/lossless/response/RAHoEuJpTf2A7oZ89fundA", // Placeholder AWS Bedrock logo, replace with actual if available
       technologies: ["AWS Bedrock", "Party Rock", "AI", "AWS Server", "Cloud Deployment"],
       LiveDemo: "https://partyrock.aws/u/sahkanu34/KiVXHJHU0/HealthGuide-AI",
       category: "AI Models",
@@ -50,7 +50,7 @@ const Projects: React.FC = () => {
       id: 4,
       title: "Blood Bank Management System (Raktasetu)",
       description: "A Django-based app for managing blood donor and request interactions with admin control panel.",
-      image: "https://images.pexels.com/photos/5863393/pexels-photo-5863393.jpeg",
+      image: "https://ideogram.ai/assets/image/lossless/response/wuFPZptxSpygK8S4jcd1rw",
       technologies: ["CI/CD","Django", "MySQL", "Bootstrap", "PIL","Docker"],
       repoLink: "https://github.com/sahkanu34/Raktasetu",
       category: "Applications",
@@ -63,7 +63,7 @@ const Projects: React.FC = () => {
       technologies: ["Regression", "scikit-learn", "Streamlit", "Docker", "Pandas","Plotly"],
       LiveDemo: "https://salarypredictionapp34.streamlit.app/",
       repoLink: "https://github.com/sahkanu34/salary_prediction_app",
-      category: "Applications",
+      category: "AI Models",
     },
   ];
 
