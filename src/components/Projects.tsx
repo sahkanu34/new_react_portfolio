@@ -19,16 +19,25 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
+      title: "HealthGuide Assistant AI",
+      description: "An AI-powered health assistant built using AWS Bedrock's Party Rock, deployed on an AWS server to provide real-time health guidance and support.",
+      image: "images/bot_ai.jpeg", // Placeholder AWS Bedrock logo, replace with actual if available
+      technologies: ["AWS Bedrock", "Party Rock", "AI", "AWS Server", "Cloud Deployment"],
+      LiveDemo: "https://partyrock.aws/u/sahkanu34/KiVXHJHU0/HealthGuide-AI",
+      category: "AI Models",
+    },
+    {
+      id: 2,
       title: "NeuroScan AI ",
       description: "A deep learning model using CNN to detect brain tumors from MRI scans, integrated into a Streamlit web app.",
       image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/brain.jpeg?raw=true",
-      technologies: ["CNN","MobileNetV2", "TensorFlow", "Keras", "Deep Learning", "Streamlit","Docker"],
+      technologies: ["CNN","MobileNetV2", "TensorFlow", "Keras", "Deep Learning", "Streamlit","Docker", "Latest"],
       LiveDemo: "https://braintumourdetectionsystem-34.streamlit.app/",
       repoLink: "https://github.com/sahkanu34/Brain_tumour_detection_system",
       category: "AI Models",
     },
     {
-      id: 2,
+      id: 3,
       title: "Cancer Prediction App",
       description: "Machine learning app predicting cancer likelihood using MLflow tracking and CI/CD deployment.",
       image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/cancer.jpeg?raw=true",
@@ -38,7 +47,7 @@ const Projects: React.FC = () => {
       category: "AI Models",
     },
     {
-      id: 3,
+      id: 4,
       title: "Blood Bank Management System (Raktasetu)",
       description: "A Django-based app for managing blood donor and request interactions with admin control panel.",
       image: "https://images.pexels.com/photos/5863393/pexels-photo-5863393.jpeg",
@@ -47,7 +56,7 @@ const Projects: React.FC = () => {
       category: "Applications",
     },
     {
-      id: 4,
+      id: 5,
       title: "Salary Prediction App",
       description: "A regression-based model to predict salaries based on experience with a Flask-based web interface.",
       image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
