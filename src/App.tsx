@@ -8,6 +8,7 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext';
+import Chatbot from './components/Chatbot';
 
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -38,6 +39,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <Chatbot />
       </div>
     </ThemeProvider>
   );

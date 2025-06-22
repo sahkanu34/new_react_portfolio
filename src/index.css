@@ -43,3 +43,13 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
 }
+
+@keyframes fadein-menu {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-fadein-menu {
+  animation: fadein-menu 0.4s cubic-bezier(0.77,0,0.175,1) both;
+}
