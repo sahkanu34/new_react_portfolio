@@ -5,6 +5,26 @@ import { MessageSquare } from 'lucide-react';
 const fadeInClass =
   'opacity-0 translate-y-2 animate-fadein transition-all duration-500 will-change-transform will-change-opacity';
 
+// Typing animation for the intro message
+const useTypewriter = (text: string, speed = 35) => {
+  const [displayed, setDisplayed] = useState('');
+  useEffect(() => {
+    let i = 0;
+    let cancelled = false;
+    function type() {
+      if (cancelled) return;
+      setDisplayed(text.slice(0, i));
+      if (i < text.length) {
+        i++;
+        setTimeout(type, text[i - 1] === '.' || text[i - 1] === '?' ? speed * 8 : speed);
+      }
+    }
+    type();
+    return () => { cancelled = true; };
+  }, [text, speed]);
+  return displayed;
+};
+
 interface ChatMessage {
   sender: 'bot' | 'user';
   text: string | JSX.Element;
@@ -14,7 +34,7 @@ interface ChatMessage {
 const initialMessages: ChatMessage[] = [
   {
     sender: 'bot',
-    text: `Hello! 👋 I'm Suraj's portfolio assistant. Are you a recruiter, student, or just browsing?`,
+    text: '', // Will be animated in Chatbot below
     timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
   }
 ];
@@ -130,10 +150,35 @@ const style = `
 .animate-fadein {
   animation: fadein 0.5s cubic-bezier(.4,0,.2,1) forwards;
 }
+@keyframes waveHand {
+  0% { transform: rotate(0deg);}
+  10% { transform: rotate(14deg);}
+  20% { transform: rotate(-8deg);}
+  30% { transform: rotate(14deg);}
+  40% { transform: rotate(-4deg);}
+  50% { transform: rotate(10deg);}
+  60% { transform: rotate(0deg);}
+  100% { transform: rotate(0deg);}
+}
+.wave-hand {
+  display: inline-block;
+  animation: waveHand 1.6s 1;
+  transform-origin: 70% 70%;
+}
 `;
 
 const Chatbot: React.FC = () => {
-  const [messages, setMessages] = useState<ChatMessage[]>(initialMessages);
+  // For animated intro
+  const introText = `Hello! 👋 I'm Suraj's portfolio assistant. Are you a recruiter, student, or just browsing?`;
+  const animatedIntro = useTypewriter(introText, 32);
+
+  const [messages, setMessages] = useState<ChatMessage[]>([
+    {
+      sender: 'bot',
+      text: '', // Will be animated below
+      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+    }
+  ]);
   const [input, setInput] = useState('');
   const [awaitingType, setAwaitingType] = useState(true);
   const [userType, setUserType] = useState<string | null>(null);
@@ -148,6 +193,30 @@ const Chatbot: React.FC = () => {
 
   // For FAQ/Most Requested Questions toggle
   const [showFAQ, setShowFAQ] = useState(false);
+
+  // Animate the intro message only once, and only for the first message
+  useEffect(() => {
+    if (messages.length === 1 && messages[0].sender === 'bot') {
+      setMessages([
+        {
+          sender: 'bot',
+          text: (
+            <span>
+              <span>
+                Hello!{' '}
+                <span className="wave-hand" role="img" aria-label="waving hand">
+                  👋
+                </span>{' '}
+                I'm <span className="font-bold text-teal-600 dark:text-teal-300 animate-gradient-text">Suraj's Assistant</span>. Are you a recruiter, student, or just browsing?
+              </span>
+            </span>
+          ),
+          timestamp: messages[0].timestamp
+        }
+      ]);
+    }
+    // eslint-disable-next-line
+  }, []);
 
   useEffect(() => {
     if (open) {
@@ -350,7 +419,9 @@ const Chatbot: React.FC = () => {
     }
     if (lower.includes('hello') || lower.includes('hi') || lower.includes('hey')) {
       const greetings = [
-        "Namaste! I'm Suraj's Chatbot Assistant, how can I help you? 🙏",
+        <span key="greet1">
+          <span className="wave-hand" role="img" aria-label="waving hand">👋</span> Hello! I'm <span className="font-bold text-teal-600 dark:text-teal-300 animate-gradient-text">Suraj's Assistant</span>, how can I help you?
+        </span>,
         'Hello! How can I assist you today?',
         'Hi there! How may I help you?',
         'Greetings! How can I support you?'
@@ -381,7 +452,7 @@ const Chatbot: React.FC = () => {
     ) {
       return (
         <span>
-          I am Suraj's portfolio assistant.<br/>
+          I am <span className="font-bold text-teal-600 dark:text-teal-300 animate-gradient-text">Suraj's portfolio assistant</span>.<br/>
           <strong>About Suraj:</strong> Suraj Sah is an accomplished AI/ML Engineer and Researcher with a strong background in Machine Learning, Deep Learning, Data Analytics, and MLOps. He has contributed to impactful projects, including AI-powered health assistants and advanced brain tumor detection systems.<br/>
           <br/>
           You may inquire about his <a href="#skills" className="ml-1 px-2 py-1 bg-teal-100 dark:bg-slate-700 text-teal-700 dark:text-teal-300 rounded text-xs font-medium hover:bg-teal-200 dark:hover:bg-teal-600 transition-colors" style={{ textDecoration: 'none' }}>skills</a>, <a href="#projects" className="ml-1 px-2 py-1 bg-teal-100 dark:bg-slate-700 text-teal-700 dark:text-teal-300 rounded text-xs font-medium hover:bg-teal-200 dark:hover:bg-teal-600 transition-colors" style={{ textDecoration: 'none' }}>projects</a>, <a href="#Education" className="ml-1 px-2 py-1 bg-teal-100 dark:bg-slate-700 text-teal-700 dark:text-teal-300 rounded text-xs font-medium hover:bg-teal-200 dark:hover:bg-teal-600 transition-colors" style={{ textDecoration: 'none' }}>education</a>, or how to <a href="#contact" className="ml-1 px-2 py-1 bg-teal-100 dark:bg-slate-700 text-teal-700 dark:text-teal-300 rounded text-xs font-medium hover:bg-teal-200 dark:hover:bg-teal-600 transition-colors" style={{ textDecoration: 'none' }}>contact</a> him for further information.
@@ -452,7 +523,7 @@ const Chatbot: React.FC = () => {
           >
             <span className="flex items-center gap-3">
               <span role='img' aria-label='robot' className="animate-bounce-slow text-2xl">🤖</span>
-              <span className="font-bold">Suraj's Assistant</span>
+              <span className="font-bold animate-gradient-text">Suraj's Assistant</span>
             </span>
             <button
               className="ml-2 text-slate-400 hover:text-teal-600 dark:hover:text-teal-300 text-2xl font-bold focus:outline-none transition-colors duration-200"
@@ -470,32 +541,57 @@ const Chatbot: React.FC = () => {
               transition: 'background 0.3s'
             }}
           >
-            {messages.map((msg, idx) => (
-              <div
-                key={idx}
-                className={`flex ${msg.sender === 'bot' ? 'justify-start' : 'justify-end'} group`}
-              >
+            {/* Animated intro message */}
+            {messages.length === 1 && (
+              <div className="flex justify-start group">
                 <div
-                  className={`relative px-4 py-3 rounded-2xl max-w-[80%] transition-all duration-500 shadow-md ${
-                    msg.sender === 'bot'
-                      ? 'bg-gradient-to-br from-teal-50 to-white dark:from-slate-700 dark:to-slate-800 text-slate-800 dark:text-slate-200 border border-teal-100 dark:border-slate-700'
-                      : 'bg-gradient-to-br from-teal-600 to-teal-500 text-white dark:from-teal-500 dark:to-teal-400 dark:text-white border border-teal-600 dark:border-teal-400'
-                  } ${idx === animatedIdx ? fadeInClass : ''}`}
+                  className={`relative px-4 py-3 rounded-2xl max-w-[80%] transition-all duration-500 shadow-md bg-gradient-to-br from-teal-50 to-white dark:from-slate-700 dark:to-slate-800 text-slate-800 dark:text-slate-200 border border-teal-100 dark:border-slate-700 ${fadeInClass}`}
                   style={{
-                    boxShadow:
-                      msg.sender === 'bot'
-                        ? '0 1.5px 6px 0 rgba(20,184,166,0.08)'
-                        : '0 2px 8px 0 rgba(20,184,166,0.12)',
+                    boxShadow: '0 1.5px 6px 0 rgba(20,184,166,0.08)',
                     transition: 'background 0.3s, color 0.3s, box-shadow 0.3s'
                   }}
                 >
-                  {msg.text}
+                  <span>
+                    Hello!{' '}
+                    <span className="wave-hand" role="img" aria-label="waving hand">
+                      👋
+                    </span>{' '}
+                    I'm <span className="font-bold text-teal-600 dark:text-teal-300 animate-gradient-text">Suraj's Assistant</span>. Are you a recruiter, student, or just browsing?
+                  </span>
                   <span className={`absolute -bottom-5 right-2 text-xs text-slate-400 dark:text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
-                    {msg.timestamp}
+                    {messages[0].timestamp}
                   </span>
                 </div>
               </div>
-            ))}
+            )}
+            {/* Other messages */}
+            {messages.length > 1 &&
+              messages.map((msg, idx) => (
+                <div
+                  key={idx}
+                  className={`flex ${msg.sender === 'bot' ? 'justify-start' : 'justify-end'} group`}
+                >
+                  <div
+                    className={`relative px-4 py-3 rounded-2xl max-w-[80%] transition-all duration-500 shadow-md ${
+                      msg.sender === 'bot'
+                        ? 'bg-gradient-to-br from-teal-50 to-white dark:from-slate-700 dark:to-slate-800 text-slate-800 dark:text-slate-200 border border-teal-100 dark:border-slate-700'
+                        : 'bg-gradient-to-br from-teal-600 to-teal-500 text-white dark:from-teal-500 dark:to-teal-400 dark:text-white border border-teal-600 dark:border-teal-400'
+                    } ${idx === animatedIdx ? fadeInClass : ''}`}
+                    style={{
+                      boxShadow:
+                        msg.sender === 'bot'
+                          ? '0 1.5px 6px 0 rgba(20,184,166,0.08)'
+                          : '0 2px 8px 0 rgba(20,184,166,0.12)',
+                      transition: 'background 0.3s, color 0.3s, box-shadow 0.3s'
+                    }}
+                  >
+                    {msg.text}
+                    <span className={`absolute -bottom-5 right-2 text-xs text-slate-400 dark:text-slate-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200`}>
+                      {msg.timestamp}
+                    </span>
+                  </div>
+                </div>
+              ))}
             {/* FAQ Section */}
             {showFAQ && (
               <div className="mt-4 mb-2 p-4 bg-teal-50 dark:bg-slate-800 rounded-xl border border-teal-100 dark:border-slate-700 shadow">
@@ -598,7 +694,7 @@ const Chatbot: React.FC = () => {
           </div>
         </div>
       )}
-      {/* Custom slow bounce for robot emoji */}
+      {/* Custom slow bounce for robot emoji and animated gradient text */}
       <style>
         {`
         .animate-bounce-slow {
@@ -607,6 +703,33 @@ const Chatbot: React.FC = () => {
         @keyframes bounce-slow {
           0%, 100% { transform: translateY(0);}
           50% { transform: translateY(-6px);}
+        }
+        .wave-hand {
+          display: inline-block;
+          animation: waveHand 1.6s 1;
+          transform-origin: 70% 70%;
+        }
+        @keyframes waveHand {
+          0% { transform: rotate(0deg);}
+          10% { transform: rotate(14deg);}
+          20% { transform: rotate(-8deg);}
+          30% { transform: rotate(14deg);}
+          40% { transform: rotate(-4deg);}
+          50% { transform: rotate(10deg);}
+          60% { transform: rotate(0deg);}
+          100% { transform: rotate(0deg);}
+        }
+        .animate-gradient-text {
+          background: linear-gradient(90deg, #14b8a6, #2563eb, #14b8a6);
+          background-size: 200% 200%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: gradientMove 2.5s linear infinite;
+        }
+        @keyframes gradientMove {
+          0% { background-position: 0% 50%;}
+          50% { background-position: 100% 50%;}
+          100% { background-position: 0% 50%;}
         }
         `}
       </style>
