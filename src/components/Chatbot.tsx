@@ -50,7 +50,7 @@ const navSections = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Education', href: '#Education' },
+  { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -60,7 +60,7 @@ const faqs = [
     question: "Can I see Suraj's resume?",
     answer: (
       <span>
-        You can <a href="https://ugc.production.linktr.ee/e31aec64-d3f1-4bd4-81fa-686ae2b9923c_surajresume--9---1--1.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
+        You can <a href="https://ugc.production.linktr.ee/8131d8ac-18b0-4a5c-9d48-d4b91aa152cf_surajresume--12-.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
       </span>
     ),
     trigger: "Show Resume"
@@ -134,7 +134,7 @@ const faqs = [
     answer: (
       <span>
         Suraj has a strong background in AI and ML. Visit the
-        <a href="#Education" className="ml-1 px-2 py-1 bg-teal-100 dark:bg-slate-700 text-teal-700 dark:text-teal-300 rounded text-xs font-medium hover:bg-teal-200 dark:hover:bg-teal-600 transition-colors" style={{ textDecoration: 'none' }}>Education</a>
+        <a href="#education" className="ml-1 px-2 py-1 bg-teal-100 dark:bg-slate-700 text-teal-700 dark:text-teal-300 rounded text-xs font-medium hover:bg-teal-200 dark:hover:bg-teal-600 transition-colors" style={{ textDecoration: 'none' }}>Education</a>
         section for more info.
       </span>
     ),
@@ -245,16 +245,16 @@ const Chatbot: React.FC = () => {
       if (!lastBotMsg) return;
       const text = typeof lastBotMsg.text === 'string' ? lastBotMsg.text : '';
       if (/resume|cv/i.test(text)) {
-        setSuggestions(['Show Resume', 'Contact Info', 'Projects', 'FAQ']);
+        setSuggestions(['Show Resume', 'Contact Info', 'Projects', 'FAQ', 'Fun']);
       } else if (/project|work/i.test(text)) {
-        setSuggestions(['Show Projects', 'Skills', 'Contact Info', 'FAQ']);
+        setSuggestions(['Show Projects', 'Skills', 'Contact Info', 'FAQ', 'Fun']);
       } else if (/contact|reach|connect/i.test(text)) {
-        setSuggestions(['Email', 'Phone', 'LinkedIn', 'FAQ']);
+        setSuggestions(['Email', 'Phone', 'LinkedIn', 'FAQ', 'Fun']);
       } else {
-        setSuggestions(['Skills', 'Projects', 'Education', 'Resume', 'Contact', 'FAQ']);
+        setSuggestions(['Skills', 'Projects', 'Education', 'Resume', 'Contact', 'FAQ', 'Fun']);
       }
     } else {
-      setSuggestions(['FAQ']);
+      setSuggestions(['FAQ', 'Fun']);
     }
   }, [messages, awaitingType]);
 
@@ -296,6 +296,15 @@ const Chatbot: React.FC = () => {
       setTimeout(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
       }, 100);
+      return;
+    }
+    if (suggestion === "Fun") {
+      setMessages(prev => [
+        ...prev,
+        { sender: 'user', text: 'Tell me something fun!', timestamp: getTimestamp() },
+        { sender: 'bot', text: getBotReply('joke'), timestamp: getTimestamp() }
+      ]);
+      setTimeout(() => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
       return;
     }
     setInput(suggestion);
@@ -424,7 +433,10 @@ const Chatbot: React.FC = () => {
         </span>,
         'Hello! How can I assist you today?',
         'Hi there! How may I help you?',
-        'Greetings! How can I support you?'
+        'Greetings! How can I support you?',
+        'Namaste! I am here to assist you.',
+        'Hey! What can I do for you?',
+        'Howdy! Need help with something?'
       ];
       return greetings[Math.floor(Math.random() * greetings.length)];
     }
@@ -465,6 +477,111 @@ const Chatbot: React.FC = () => {
           Suraj has 2+ years of experience as an AI Engineer, Machine Learning Engineer, and Research Assistant. He has completed 10+ projects and deployed 5+ AI solutions. Learn more in the
           <a href="#about" className="ml-1 px-2 py-1 bg-teal-100 dark:bg-slate-700 text-teal-700 dark:text-teal-300 rounded text-xs font-medium hover:bg-teal-200 dark:hover:bg-teal-600 transition-colors" style={{ textDecoration: 'none' }}>About</a>
           section.
+        </span>
+      );
+    }
+    if (lower.includes('hobby') || lower.includes('hobbies') || lower.includes('free time')) {
+      return (
+        <span>
+          Suraj enjoys reading about AI advancements, playing chess, hiking, and exploring new technologies in his free time.
+        </span>
+      );
+    }
+    if (lower.includes('fun fact')) {
+      return (
+        <span>
+          Fun fact: Suraj once built an AI that can play chess at an intermediate level! He also loves learning about the brain and neuroscience.
+        </span>
+      );
+    }
+    if (lower.includes('programming language') || lower.includes('languages you use') || lower.includes('languages does suraj use')) {
+      return (
+        <span>
+          Suraj codes in Python, JavaScript/TypeScript, and has experience with C++, R, and SQL.
+        </span>
+      );
+    }
+    if (lower.includes('favorite project') || lower.includes('favourite project')) {
+      return (
+        <span>
+          Suraj's favorite project is <a href="https://partyrock.aws/u/sahkanu34/KiVXHJHU0/HealthGuide-AI" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>HealthGuide Assistant AI</a>, an AI-powered health assistant that helps users with medical queries and health tracking.
+        </span>
+      );
+    }
+    if (lower.includes('certification') || lower.includes('certifications')) {
+      return (
+        <span>
+          Suraj holds certifications in Machine Learning (Coursera), Deep Learning Specialization, and AWS Cloud Practitioner.
+        </span>
+      );
+    }
+    if (lower.includes('dream job')) {
+      return (
+        <span>
+          Suraj's dream job is to work as a Lead AI Researcher, building impactful AI solutions for healthcare and society.
+        </span>
+      );
+    }
+    if (lower.includes('joke') || lower.includes('funny') || lower.includes('something fun')) {
+      const jokes = [
+        "Why did the neural network go to school? To improve its learning rate! 😄",
+        "Why do programmers prefer dark mode? Because light attracts bugs!",
+        "Why was the computer cold? It forgot to close its Windows!",
+        "Why did the AI break up with its girlfriend? It lost interest after too many epochs.",
+        "Why did the data scientist get thrown out of the casino? He kept trying to find the pattern in the roulette wheel!"
+      ];
+      const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+      return <span>{randomJoke}</span>;
+    }
+    if (lower.includes('biggest achievement') || lower.includes('major achievement') || lower.includes('proud of')) {
+      return (
+        <span>
+          Suraj is most proud of developing a brain tumor detection system that assists doctors in early diagnosis, potentially saving lives.
+        </span>
+      );
+    }
+    if (lower.includes('preferred tech stack') || lower.includes('tech stack') || lower.includes('stack')) {
+      return (
+        <span>
+          Suraj's preferred tech stack includes Python, TensorFlow, PyTorch, React, Node.js, and AWS for deploying scalable AI solutions.
+        </span>
+      );
+    }
+    if (lower.includes('collaborate') || lower.includes('work with suraj') || lower.includes('team up')) {
+      return (
+        <span>
+          You can collaborate with Suraj by reaching out via <a href="#contact" className="ml-1 px-2 py-1 bg-teal-100 dark:bg-slate-700 text-teal-700 dark:text-teal-300 rounded text-xs font-medium hover:bg-teal-200 dark:hover:bg-teal-600 transition-colors" style={{ textDecoration: 'none' }}>Contact</a> section. He is open to research, AI projects, and tech talks!
+        </span>
+      );
+    }
+    if (lower.includes('aws scholarship') || lower.includes('ai/ml scholarship') || lower.includes('udacity scholarship')) {
+      return (
+        <span>
+          Suraj was awarded the <strong>AWS AI/ML Scholarship 2025 by Udacity</strong> for his outstanding performance and dedication to machine learning and artificial intelligence.
+        </span>
+      );
+    }
+    if (lower.includes('aws machine learning foundations') || lower.includes('aws ml foundations') || lower.includes('aws ml certificate')) {
+      return (
+        <span>
+          Suraj has earned the <strong>AWS Machine Learning Foundations</strong> certificate from Udacity, demonstrating his skills in core ML concepts and AWS technologies.
+        </span>
+      );
+    }
+    if (/(certificat|certification|certifications|certificate|licence|license|licenses)/i.test(lower)) {
+      // Add a suggestion for the Credly profile
+      setSuggestions(['View Credly Profile']);
+      return (
+        <span>
+          Suraj holds several certifications and licenses in AI, Machine Learning, and Cloud Computing, including AWS and Deep Learning Specialization. Would you like to view them?
+        </span>
+      );
+    }
+    // Handle the suggestion click for Credly
+    if (lower === 'view credly profile') {
+      return (
+        <span>
+          You can view Suraj's certificates and licenses on his <a href="https://www.credly.com/users/sahkanu34" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>Credly profile</a>.
         </span>
       );
     }
