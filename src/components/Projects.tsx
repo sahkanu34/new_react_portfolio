@@ -13,10 +13,19 @@ interface Project {
 }
 
 const Projects: React.FC = () => {
-  const categories = ["All", "AI Models","Applications"];
+  const categories = ["All", "AI/ML Models", "Applications"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const projects: Project[] = [
+    {
+      id: 0,
+      title: "Market Basket Analysis - Unsupervised Learning",
+      description: "A small project using Walmart Datasets 2025 to find association rules and frequent itemsets with the Apriori algorithm.",
+      image: "https://ideogram.ai/assets/image/lossless/response/O3em_UvJT6K9SuEfDlwRJA",
+      technologies: ["Apriori", "Association Rules", "Data Mining", "Pandas", "Matplotlib", "Jupyter Notebook"],
+      repoLink: "https://github.com/sahkanu34/Market_Basket_Analysis",
+      category: "AI/ML Models",
+    },
     {
       id: 1,
       title: "HealthGuide Assistant AI",
@@ -24,27 +33,27 @@ const Projects: React.FC = () => {
       image: "https://ideogram.ai/assets/image/lossless/response/RAHoEuJpTf2A7oZ89fundA", // Placeholder AWS Bedrock logo, replace with actual if available
       technologies: ["AWS Bedrock", "Party Rock", "AI", "AWS Server", "Cloud Deployment"],
       LiveDemo: "https://partyrock.aws/u/sahkanu34/KiVXHJHU0/HealthGuide-AI",
-      category: "AI Models",
+      category: "AI/ML Models",
     },
     {
       id: 2,
-      title: "NeuroScan AI ",
+      title: "NeuroScan AI - Deep Learning",
       description: "A deep learning model using CNN to detect brain tumors from MRI scans, integrated into a Streamlit web app.",
       image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/brain.jpeg?raw=true",
       technologies: ["CNN","MobileNetV2", "TensorFlow", "Keras", "Deep Learning", "Streamlit","Docker", "Latest"],
       LiveDemo: "https://braintumourdetectionsystem-34.streamlit.app/",
       repoLink: "https://github.com/sahkanu34/Brain_tumour_detection_system",
-      category: "AI Models",
+      category: "AI/ML Models",
     },
     {
       id: 3,
-      title: "Cancer Prediction App",
+      title: "Cancer Prediction App - Classification",
       description: "Machine learning app predicting cancer likelihood using MLflow tracking and CI/CD deployment.",
       image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/cancer.jpeg?raw=true",
       technologies: ["Classification", "scikit-learn", "MLflow", "Docker", "Streamlit","Pandas","Plotly"],
       LiveDemo: "https://cancerpredictionapp-34.streamlit.app",
       repoLink: "https://github.com/sahkanu34/cancer_prediction_app",
-      category: "AI Models",
+      category: "AI/ML Models",
     },
     {
       id: 4,
@@ -57,19 +66,19 @@ const Projects: React.FC = () => {
     },
     {
       id: 5,
-      title: "Salary Prediction App",
+      title: "Salary Prediction App - Regression",
       description: "A regression-based model to predict salaries based on experience with a Flask-based web interface.",
       image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
       technologies: ["Regression", "scikit-learn", "Streamlit", "Docker", "Pandas","Plotly"],
       LiveDemo: "https://salarypredictionapp34.streamlit.app/",
       repoLink: "https://github.com/sahkanu34/salary_prediction_app",
-      category: "AI Models",
+      category: "AI/ML Models",
     },
   ];
 
   const filteredProjects = activeCategory === "All"
     ? projects
-    : projects.filter(project => project.category === activeCategory);
+    : projects.filter(project => project.category.trim() === activeCategory.trim());
 
   return (
     <section id="projects" className="py-20 px-4 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
@@ -102,21 +111,24 @@ const Projects: React.FC = () => {
         {/* Project Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
-            <div key={project.id} className="group">
-              <div className="bg-slate-50 dark:bg-slate-700 rounded-xl overflow-hidden shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1">
-                <div className="h-56 overflow-hidden">
+            <div
+              key={project.id}
+              className="group flex flex-col h-full"
+            >
+              <div className="flex flex-col h-full bg-slate-50 dark:bg-slate-700 rounded-xl overflow-hidden shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1">
+                <div className="h-56 overflow-hidden flex-shrink-0">
                   <img 
                     src={project.image} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-6">
+                <div className="flex flex-col flex-1 p-6">
                   <div className="text-xs font-medium text-teal-600 dark:text-teal-400 mb-2">
                     {project.category}
                   </div>
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-1">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
@@ -129,7 +141,7 @@ const Projects: React.FC = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 mt-auto">
                     {project.LiveDemo && (
                       <a 
                         href={project.LiveDemo} 

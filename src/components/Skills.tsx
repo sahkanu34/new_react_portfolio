@@ -31,7 +31,7 @@ const Skills: React.FC = () => {
       icon: <Code size={24} className="text-purple-500" />,
       skills: [
         { name: "Python", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-        { name: "C", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+        { name: "C", icon: <Code size={16} className="text-purple-500" />, image: "https://icon.icepanel.io/Technology/svg/C.svg" },
         { name: "Java", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
         { name: "C#", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
         // { name: "JavaScript", icon: <Code size={16} className="text-purple-500" /> },
@@ -53,6 +53,7 @@ const Skills: React.FC = () => {
       icon: <Globe size={24} className="text-emerald-500" />,
       skills: [
         { name: "Jupyter Notebook", icon: <Terminal size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
+        { name: "Anaconda Navigator", icon: <Terminal size={16} className="text-emerald-500" />, image: "https://icon.icepanel.io/Technology/svg/Anaconda.svg" },
         { name: "PyCharm", icon: <Terminal size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" },
         { name: "Docker", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
         { name: "Kubernetes", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
