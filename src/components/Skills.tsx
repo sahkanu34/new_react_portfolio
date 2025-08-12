@@ -42,6 +42,7 @@ const Skills: React.FC = () => {
       icon: <Cpu size={24} className="text-amber-500" />,
       skills: [
         { name: "Machine Learning", icon: <Cpu size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Data Annotation Specialist", icon: <Cpu size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "Deep Learning", icon: <Layers size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "Dashboards", icon: <BarChart size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "Data Analytics", icon: <BarChartBigIcon size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
