@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
       description: "CNN model detecting brain tumors from MRI scans with Streamlit web app integration.",
       image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/brain.jpeg?raw=true",
       technologies: ["CNN","MobileNetV2", "TensorFlow", "Keras", "Deep Learning", "Streamlit","Docker", "Latest"],
-      LiveDemo: "https://braintumourdetectionsystem-34.streamlit.app/",
+      // LiveDemo: "https://braintumourdetectionsystem-34.streamlit.app/",
       repoLink: "https://github.com/sahkanu34/Brain_tumour_detection_system",
       category: "AI/ML Models",
     },
