@@ -60,7 +60,7 @@ const faqs = [
     question: "Can I see Suraj's resume?",
     answer: (
       <span>
-        You can <a href="https://ugc.production.linktr.ee/52c3c1e4-3af6-4310-bc76-b22db82baf23_surajresume--16-.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
+        You can <a href="https://ugc.production.linktr.ee/a5818404-b03d-496e-a2aa-1429bc9a2fb1_surajresume--20-.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
       </span>
     ),
     trigger: "Show Resume"
@@ -194,6 +194,15 @@ const Chatbot: React.FC = () => {
   // For FAQ/Most Requested Questions toggle
   const [showFAQ, setShowFAQ] = useState(false);
 
+  // Jokes array for the Fun button
+  const jokes = [
+    "Why did the neural network go to school? To improve its learning rate! 😄",
+    "Why do programmers prefer dark mode? Because light attracts bugs!",
+    "Why was the computer cold? It forgot to close its Windows!",
+    "Why did the AI break up with its girlfriend? It lost interest after too many epochs.",
+    "Why did the data scientist get thrown out of the casino? He kept trying to find the pattern in the roulette wheel!"
+  ];
+
   // Animate the intro message only once, and only for the first message
   useEffect(() => {
     if (messages.length === 1 && messages[0].sender === 'bot') {
@@ -207,7 +216,7 @@ const Chatbot: React.FC = () => {
                 <span className="wave-hand" role="img" aria-label="waving hand">
                   👋
                 </span>{' '}
-                I'm <span className="font-bold text-teal-600 dark:text-teal-300 animate-gradient-text">Suraj's Assistant</span>. Are you a recruiter, student, or just browsing?
+                Namaste <span className="font-bold text-teal-600 dark:text-teal-300 animate-gradient-text">Insightly AI 🙏</span>. Are you a recruiter, student, or just browsing?
               </span>
             </span>
           ),
@@ -298,11 +307,12 @@ const Chatbot: React.FC = () => {
       }, 100);
       return;
     }
+    // Change: Fun button cracks a joke directly, not "Tell me something fun!"
     if (suggestion === "Fun") {
+      const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
       setMessages(prev => [
         ...prev,
-        { sender: 'user', text: 'Tell me something fun!', timestamp: getTimestamp() },
-        { sender: 'bot', text: getBotReply('joke'), timestamp: getTimestamp() }
+        { sender: 'bot', text: <span>{randomJoke}</span>, timestamp: getTimestamp() }
       ]);
       setTimeout(() => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' }), 100);
       return;
@@ -523,13 +533,7 @@ const Chatbot: React.FC = () => {
       );
     }
     if (lower.includes('joke') || lower.includes('funny') || lower.includes('something fun')) {
-      const jokes = [
-        "Why did the neural network go to school? To improve its learning rate! 😄",
-        "Why do programmers prefer dark mode? Because light attracts bugs!",
-        "Why was the computer cold? It forgot to close its Windows!",
-        "Why did the AI break up with its girlfriend? It lost interest after too many epochs.",
-        "Why did the data scientist get thrown out of the casino? He kept trying to find the pattern in the roulette wheel!"
-      ];
+      // Use the same jokes array as above for consistency
       const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
       return <span>{randomJoke}</span>;
     }
