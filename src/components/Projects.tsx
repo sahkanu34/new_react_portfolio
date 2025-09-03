@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
       id: 0,
       title: "Yolov8 Object Detection for Brain Tumors",
       description: "Object detection system using Yolov8 to identify brain tumors in MRI images with real-time detection capabilities and visualization interface.",
-      image: "images/yolo.jpeg",
+      image: "https://ideogram.ai/assets/progressive-image/balanced/response/FZtNandBRjeifLWIn-r-fA",
       technologies: ["YOLOv8", "Ultralytics", "Object Detection", "PyTorch", "OpenCV", "Medical Imaging", "Streamlit"],
       // LiveDemo: "https://yolov8braintumor.streamlit.app/",
       repoLink: "https://github.com/sahkanu34/yolov8_object_detection",
