@@ -1,5 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { ArrowRight} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+
+const companyLogos = [
+  {
+    name: "NAAMII",
+    src: "https://www.naamii.org.np/wp-content/uploads/2023/02/naamii_logo.svg",
+    alt: "NAAMII Logo",
+    href: "https://naamii.org.np/"
+  },
+  // Add more companies here if needed
+];
 
 const Hero: React.FC = () => {
   const [displayText, setDisplayText] = useState('');
@@ -79,25 +89,50 @@ const Hero: React.FC = () => {
                 View Projects
               </a>
             </div>
+            {/* Trusted and work in company logo section */}
+            <div className="flex flex-col items-start mt-6">
+              <span className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-2">
+              Trusted & worked in:
+              </span>
+              <div className="flex flex-row items-center gap-6">
+              {companyLogos.map((company) => (
+                <a
+                key={company.name}
+                href={company.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+                >
+                <img
+                  src={company.src}
+                  alt={company.alt}
+                  className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                  style={{ maxWidth: 180 }}
+                />
+                </a>
+              ))}
+              </div>
+            </div>
+            {/* End Trusted and work in company logo section */}
           </div>
           
           <div className="w-full md:w-1/2 relative md:mr-16">
             <div 
-              className={`relative w-72 h-72 mx-auto rounded-full overflow-hidden ring-4 ring-teal-500/20 dark:ring-teal-400/20 transition-all duration-300 transform ${
-                isHovered ? 'scale-105 rotate-2' : 'scale-100'
+              className={`relative w-full max-w-xs h-auto aspect-square mx-auto overflow-hidden rounded-full ring-4 ring-teal-500/20 dark:ring-teal-400/20 transition-all duration-300 transform ${
+              isHovered ? 'scale-105 rotate-2' : 'scale-100'
               }`}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
               <img 
-                src="https://github.com/sahkanu34/new_react_portfolio/blob/main/github_profile.jpg?raw=true"
+                src="images/profile.png"
                 alt="AI Illustration" 
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 bg-teal-600 dark:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+            {/* <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 bg-teal-600 dark:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
               Available for Work
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

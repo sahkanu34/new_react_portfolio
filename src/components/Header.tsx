@@ -12,6 +12,7 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
   const navLinks = [
     { title: 'Home', href: '#home' },
     { title: 'About', href: '#about' },
+    { title: 'Experience', href: '#experience' },
     { title: 'Skills', href: '#skills' },
     { title: 'Projects', href: '#projects' },
     { title: 'Education', href: '#education' },
