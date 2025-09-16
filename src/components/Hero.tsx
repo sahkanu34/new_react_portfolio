@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
               onMouseLeave={() => setIsHovered(false)}
             >
               <img 
-                src="images/profile.png"
+                src="images/new_profile.png"
                 alt="AI Illustration" 
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
