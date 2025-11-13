@@ -22,12 +22,12 @@ const Experience: React.FC = () => {
   const experienceData: ExperienceItem[] = [
     {
         id: 1,
-        position: "Research Intern (Medical Image Analysis & ML Engineer)",
+        position: "Research Intern (Medical Image Analysis & Machine Learning)",
         company: "NAAMII (Nepal Applied Mathematics and Informatics Institute for Research)",
         location: "Remote",
         period: "Aug 2025 - Present",
         description: "I work as a Research Intern at NAAMII, focusing on Medical Image Analysis and Machine Learning Engineering. My work involves developing and applying deep learning models to solve real-world healthcare challenges.",
-        technologies: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "Medical Imaging"],
+        technologies: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "Medical Imaging","ITK-Snap","3D Slicer"],
         achievements: [
           "Developed and optimized deep learning models for medical image segmentation and classification",
           "Collaborated with a multidisciplinary team of researchers and clinicians",

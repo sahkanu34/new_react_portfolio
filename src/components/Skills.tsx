@@ -11,6 +11,7 @@ const Skills: React.FC = () => {
         { name: "Keras", icon: <Code size={16} className="text-teal-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" },
         { name: "PyTorch", icon: <Flame size={16} className="text-teal-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" },
         { name: "Scikit-Learn", icon: <BarChartBigIcon size={16} className="text-teal-500" />, image: "https://icon.icepanel.io/Technology/svg/scikit-learn.svg" },
+        { name: "Open-CV", icon: <BarChartBigIcon size={16} className="text-teal-500" />, image: "https://icon.icepanel.io/Technology/svg/OpenCV.svg" },
         { name: "Google Colab", icon: <Terminal size={16} className="text-teal-500" />, image: "https://colab.google/static/images/icons/colab.png" },
         { name: "Streamlit", icon: <Server size={16} className="text-teal-500" />, image: "https://icon.icepanel.io/Technology/svg/Streamlit.svg" },
       ]
@@ -46,7 +47,7 @@ const Skills: React.FC = () => {
         { name: "Deep Learning", icon: <Layers size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "Dashboards", icon: <BarChart size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
         { name: "Data Analytics", icon: <BarChartBigIcon size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-        { name: "MLOps", icon: <GitBranch size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+        { name: "Medical Imaging", icon: <GitBranch size={16} className="text-amber-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       ]
     },
     {
@@ -58,7 +59,7 @@ const Skills: React.FC = () => {
         { name: "PyCharm", icon: <Terminal size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" },
         { name: "Docker", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
         { name: "Kubernetes", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
-        { name: "Jenkins", icon: <GitCompare size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
+        { name: "Actions", icon: <GitCompare size={16} className="text-emerald-500" />, image: "https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg" },
         { name: "Git", icon: <Server size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
         { name: "GitHub", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
       ]
@@ -68,7 +69,7 @@ const Skills: React.FC = () => {
       icon: <SwatchBook size={24} className="text-emerald-500" />,
       skills: [
         { name: "FastAPI", icon: <Globe size={16} className="text-emerald-500" />, image: "https://icon.icepanel.io/Technology/svg/FastAPI.svg" },
-        // { name: "flask", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" },
+        { name: "django", icon: <Globe size={16} className="text-emerald-500" />, image: "https://icon.icepanel.io/Technology/png-shadow-512/Django.png" },
         { name: "Numpy", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" },
         { name: "Pandas", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" },
         { name: "Matplotlib", icon: <Globe size={16} className="text-emerald-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" },

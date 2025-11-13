@@ -16,12 +16,12 @@ const Hero: React.FC = () => {
   const [isTyping, setIsTyping] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
   const phrases = [
-    'Machine Learning Developer',
+    'Machine Learning Engineer',
     'Deep Learning Engineer',
-    // 'AI Researcher',
+    'AI & ML Researcher',
     // 'Research Scientist',
-    'AI Enthusiast',
-    'Data Analyst',
+    // 'AI Enthusiast',
+    // 'Data Analyst',
   ];
   const [phraseIndex, setPhraseIndex] = useState(0);
 
