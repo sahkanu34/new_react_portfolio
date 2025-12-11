@@ -60,7 +60,7 @@ const faqs = [
     question: "Can I see Suraj's resume?",
     answer: (
       <span>
-        You can <a href="https://ugc.production.linktr.ee/a5818404-b03d-496e-a2aa-1429bc9a2fb1_surajresume--20-.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
+        You can <a href="https://ugc.production.linktr.ee/f5de7455-4f3d-4e38-8cee-5ffdd15629b4_Suraj-resume-1.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
       </span>
     ),
     trigger: "Show Resume"
