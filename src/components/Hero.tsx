@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
               onMouseLeave={() => setIsHovered(false)}
             >
               <img 
-                src="https://github.com/sahkanu34/new_react_portfolio/blob/main/images/person.jpeg?raw=true"
+                src="https://ideogram.ai/assets/image/lossless/response/QgGnH9Q2RnW6jknJ-RXF0g"
                 alt="AI Illustration" 
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
