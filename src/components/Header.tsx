@@ -38,13 +38,13 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
       <header
         className={`fixed w-full px-4 py-4 md:py-5 transition-all duration-300 z-50 ${
           scrollY > 10
-            ? 'bg-gradient-to-b from-white/90 to-slate-50/90 dark:from-slate-900/90 dark:to-slate-800/90 backdrop-blur-md shadow-sm'
+            ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-lg border-b border-slate-200/50 dark:border-slate-700/50'
             : 'bg-transparent'
         }`}
       >
         <div className="container mx-auto flex justify-between items-center">
-          <a href="#home" className="text-2xl font-bold tracking-tight text-slate-800 dark:text-slate-200">
-            <span className="bg-gradient-to-r from-teal-500 to-blue-500 bg-clip-text text-transparent font-cursive">
+          <a href="#home" className="text-2xl font-bold tracking-tight">
+            <span className="bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent font-cursive">
               Suraj Sah Kanu
             </span>
           </a>
@@ -55,15 +55,16 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
               <a
                 key={link.title}
                 href={link.href}
-                className="text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors font-medium"
+                className="relative text-slate-700 dark:text-slate-300 hover:text-teal-600 dark:hover:text-teal-400 transition-colors font-semibold group"
               >
                 {link.title}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <button
               type="button"
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+              className="p-2.5 rounded-xl bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-700 hover:from-teal-50 hover:to-blue-50 dark:hover:from-teal-900/30 dark:hover:to-blue-900/30 border border-slate-200 dark:border-slate-700 hover:border-teal-500 dark:hover:border-teal-500 transition-all duration-300 shadow-sm hover:shadow-md"
               aria-label="Toggle theme"
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
@@ -75,7 +76,7 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
             <button
               type="button"
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+              className="p-2.5 rounded-xl bg-gradient-to-br from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-700 hover:from-teal-50 hover:to-blue-50 dark:hover:from-teal-900/30 dark:hover:to-blue-900/30 border border-slate-200 dark:border-slate-700 transition-all duration-300"
               aria-label="Toggle theme"
             >
               {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}

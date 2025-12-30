@@ -94,40 +94,48 @@ const Skills: React.FC = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index} 
-              className="group relative bg-white dark:bg-slate-800 p-6 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700"
+              className="group relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg border border-slate-200/50 dark:border-slate-700/50 hover:shadow-2xl hover:border-teal-500/50 dark:hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1"
             >
-              <h3 className="text-xl font-bold mb-4 mt-2">{category.title}</h3>
-              <div className="space-y-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <div 
-                    key={skillIndex} 
-                    className="flex items-center gap-3 p-2 rounded-lg"
-                  >
-                    <img src={skill.image} alt={skill.name} className="w-6 h-6 object-contain rounded" />
-                    <span className="text-slate-700 dark:text-slate-300 font-medium">{skill.name}</span>
-                  </div>
-                ))}
+              <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-blue-500/5 dark:from-teal-500/10 dark:to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative">
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-teal-500 to-blue-500 rounded-xl mb-4 shadow-md">
+                  <div className="text-white">{category.icon}</div>
+                </div>
+                <h3 className="text-xl font-bold mb-4 mt-2 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">{category.title}</h3>
+                <div className="space-y-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <div 
+                      key={skillIndex} 
+                      className="flex items-center gap-3 p-3 rounded-lg bg-slate-50/50 dark:bg-slate-700/50 hover:bg-gradient-to-r hover:from-teal-50 hover:to-blue-50 dark:hover:from-teal-900/30 dark:hover:to-blue-900/30 transition-all duration-200 group/skill"
+                    >
+                      <div className="w-8 h-8 flex items-center justify-center bg-white dark:bg-slate-600 rounded-lg shadow-sm group-hover/skill:shadow-md transition-shadow">
+                        <img src={skill.image} alt={skill.name} className="w-5 h-5 object-contain" />
+                      </div>
+                      <span className="text-slate-700 dark:text-slate-300 font-medium group-hover/skill:text-teal-600 dark:group-hover/skill:text-teal-400 transition-colors">{skill.name}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-teal-500 to-blue-500 rounded-xl p-8 md:p-12 text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white rounded-full -mr-10 -mt-10"></div>
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-white rounded-full -ml-10 -mb-10"></div>
+        <div className="mt-16 bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white relative overflow-hidden shadow-2xl">
+          <div className="absolute inset-0 opacity-20">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full -mr-20 -mt-20 blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-white rounded-full -ml-20 -mb-20 blur-3xl"></div>
           </div>
           <div className="relative flex flex-col md:flex-row justify-between items-center gap-8">
             <div className="space-y-4 text-center md:text-left">
               <h3 className="text-2xl md:text-3xl font-bold">Let's work together</h3>
-              <p className="max-w-lg opacity-90">
+              <p className="max-w-lg opacity-95 text-lg">
                 Looking for an AI engineer or research assistant for your next project? 
                 I'm always open to discussing new opportunities and challenges.
               </p>
             </div>
             <a 
               href="#contact" 
-              className="px-6 py-3 bg-white text-teal-600 font-medium rounded-lg shadow-md"
+              className="px-8 py-4 bg-white text-teal-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300"
             >
               Contact Me
             </a>

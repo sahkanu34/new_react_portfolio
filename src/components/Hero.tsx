@@ -52,39 +52,45 @@ const Hero: React.FC = () => {
   }, [animateText]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
-      <div className="container mx-auto">
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 px-4 bg-gradient-to-br from-slate-50 via-blue-50 to-teal-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-800 overflow-hidden">
+      {/* Animated background pattern */}
+      <div className="absolute inset-0 opacity-30 dark:opacity-20">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-teal-400 dark:bg-teal-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob"></div>
+        <div className="absolute top-40 right-20 w-72 h-72 bg-blue-400 dark:bg-blue-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-40 w-72 h-72 bg-purple-400 dark:bg-purple-600 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-4000"></div>
+      </div>
+      <div className="container mx-auto relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-24">
           <div className="w-full md:w-1/2 space-y-6 md:space-y-8 md:ml-16">
-            <div className="space-y-3">
-              <p className="text-teal-600 dark:text-teal-400 font-medium tracking-wide">
-                INNOVATION THROUGH AI & MACHINE LEARNING
+            <div className="space-y-3 animate-fade-in-up">
+              <p className="text-teal-600 dark:text-teal-400 font-semibold tracking-wider text-sm uppercase">
+                ✨ INNOVATION THROUGH AI & MACHINE LEARNING
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                <span className="block mb-2">Hello, I'm Suraj </span>
-                <div className="min-h-[3rem] text-teal-600 dark:text-teal-400">
+                <span className="block mb-2 bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white bg-clip-text text-transparent">Hello, I'm <span className="bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent">Suraj</span></span>
+                <div className="min-h-[3rem] bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
                   <span className="inline-block transition-all duration-300 ease-out">
                     {displayText}
                   </span>
-                  <span className="inline-block w-[3px] h-[1em] bg-teal-600 dark:bg-teal-400 ml-1 animate-[blink_1s_infinite]"></span>
+                  <span className="inline-block w-[3px] h-[1em] bg-gradient-to-b from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 ml-1 animate-[blink_1s_infinite]"></span>
                 </div>
               </h1>
-              <p className="text-xl text-slate-600 dark:text-slate-400 mt-4 max-w-xl">
-                Crafting intelligent solutions that push the boundaries of what's possible with artificial intelligence and machine learning.
+              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mt-6 max-w-xl leading-relaxed">
+                Crafting <span className="font-semibold text-teal-600 dark:text-teal-400">intelligent solutions</span> that push the boundaries of what's possible with artificial intelligence and machine learning.
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <a 
                 href="#contact" 
-                className="inline-flex items-center justify-center px-6 py-3 bg-teal-600 hover:bg-teal-700 dark:bg-teal-500 dark:hover:bg-teal-600 text-white font-medium rounded-lg transition-colors duration-300"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 dark:from-teal-500 dark:to-blue-500 dark:hover:from-teal-600 dark:hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg shadow-teal-500/50 dark:shadow-teal-500/30 hover:shadow-xl hover:shadow-teal-600/50 dark:hover:shadow-teal-600/40 transform hover:-translate-y-0.5 transition-all duration-300"
               >
                 Get in Touch
-                <ArrowRight size={18} className="ml-2" />
+                <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
               <a 
                 href="#projects" 
-                className="inline-flex items-center justify-center px-6 py-3 border border-slate-300 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-600 rounded-lg font-medium transition-colors duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 hover:border-teal-500 dark:hover:border-teal-500 rounded-xl font-semibold shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300"
               >
                 View Projects
               </a>

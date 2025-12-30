@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Snowfall from 'react-snowfall';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -28,6 +29,18 @@ function App() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 transition-colors duration-300">
+        <Snowfall 
+          color="#dee2e6"
+          snowflakeCount={80}
+          speed={[0.5, 1.5]}
+          style={{
+            position: 'fixed',
+            width: '100vw',
+            height: '100vh',
+            zIndex: 9999,
+            pointerEvents: 'none'
+          }}
+        />
         <Header scrollY={scrollY} />
         <main>
           <Hero />

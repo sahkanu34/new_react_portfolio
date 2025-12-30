@@ -102,15 +102,15 @@ const Projects: React.FC = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full text-sm transition-colors duration-300 ${
+              className={`px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 ${
                 activeCategory === category 
-                  ? 'bg-teal-600 dark:bg-teal-500 text-white' 
-                  : 'bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600'
+                  ? 'bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-500 dark:to-blue-500 text-white shadow-lg shadow-teal-500/50 dark:shadow-teal-500/30 scale-105' 
+                  : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 hover:border-teal-500 dark:hover:border-teal-500'
               }`}
             >
               {category}
@@ -125,27 +125,30 @@ const Projects: React.FC = () => {
               key={project.id}
               className="group flex flex-col h-full"
             >
-              <div className="flex flex-col h-full bg-slate-50 dark:bg-slate-700 rounded-xl overflow-hidden shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1">
-                <div className="h-56 overflow-hidden flex-shrink-0">
+              <div className="flex flex-col h-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg border border-slate-200/50 dark:border-slate-700/50 hover:shadow-2xl hover:border-teal-500/50 dark:hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-2">
+                <div className="relative h-56 overflow-hidden flex-shrink-0">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
+                  <div className="absolute top-3 right-3 z-20">
+                    <span className="px-3 py-1 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm text-xs font-semibold text-teal-600 dark:text-teal-400 rounded-full shadow-lg">
+                      {project.category}
+                    </span>
+                  </div>
                 </div>
                 <div className="flex flex-col flex-1 p-6">
-                  <div className="text-xs font-medium text-teal-600 dark:text-teal-400 mb-2">
-                    {project.category}
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-1">
+                  <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-slate-800 to-slate-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent group-hover:from-teal-600 group-hover:to-blue-600 dark:group-hover:from-teal-400 dark:group-hover:to-blue-400 transition-all">{project.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-400 text-sm mb-4 flex-1 leading-relaxed">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {project.technologies.map((tech, index) => (
                       <span 
                         key={index} 
-                        className="px-2 py-1 bg-slate-200 dark:bg-slate-600 text-slate-700 dark:text-slate-300 text-xs rounded-full"
+                        className="px-3 py-1 bg-gradient-to-r from-slate-100 to-slate-50 dark:from-slate-700 dark:to-slate-600 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-600"
                       >
                         {tech}
                       </span>
@@ -157,7 +160,7 @@ const Projects: React.FC = () => {
                         href={project.LiveDemo} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 font-medium"
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white text-sm font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                       >
                         Live Demo <ExternalLink size={14} className="ml-1" />
                       </a>
@@ -167,7 +170,7 @@ const Projects: React.FC = () => {
                         href={project.repoLink} 
                         target="_blank" 
                         rel="noopener noreferrer"
-                        className="inline-flex items-center text-sm text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 font-medium"
+                        className="inline-flex items-center px-4 py-2 bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 text-sm font-semibold rounded-lg border border-slate-200 dark:border-slate-600 transition-all duration-300"
                       >
                         Code <Github size={14} className="ml-1" />
                       </a>
@@ -184,9 +187,9 @@ const Projects: React.FC = () => {
             href="https://github.com/sahkanu34"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 font-medium"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-100 to-slate-50 dark:from-slate-800 dark:to-slate-700 hover:from-teal-50 hover:to-blue-50 dark:hover:from-teal-900/30 dark:hover:to-blue-900/30 text-teal-600 dark:text-teal-400 font-semibold rounded-xl border border-slate-200 dark:border-slate-700 hover:border-teal-500 dark:hover:border-teal-500 shadow-md hover:shadow-lg transition-all duration-300"
           >
-            View All Projects <ArrowRight size={16} className="ml-1" />
+            View All Projects <ArrowRight size={16} className="ml-2" />
           </a>
         </div>
       </div>
