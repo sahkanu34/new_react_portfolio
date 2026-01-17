@@ -162,9 +162,9 @@ const About: React.FC = () => {
 
         {/* Work Experience */}
         <div>
-          <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
+          {/* <h3 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-slate-900 to-slate-700 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
             Professional Journey
-          </h3>
+          </h3> */}
           <div className="space-y-6">
             {workExperience.map((work, index) => (
               <motion.div

@@ -67,12 +67,12 @@ const Hero: React.FC = () => {
                 ✨ INNOVATION THROUGH AI & MACHINE LEARNING
               </p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                <span className="block mb-2 bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white bg-clip-text text-transparent">Hello, I'm <span className="bg-gradient-to-r from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 bg-clip-text text-transparent">Suraj</span></span>
-                <div className="min-h-[3rem] bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                <span className="block mb-2 bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white bg-clip-text text-transparent">Hello, I'm Suraj</span>
+                <div className="min-h-[3rem] text-slate-900 dark:text-white">
                   <span className="inline-block transition-all duration-300 ease-out">
                     {displayText}
                   </span>
-                  <span className="inline-block w-[3px] h-[1em] bg-gradient-to-b from-teal-600 to-blue-600 dark:from-teal-400 dark:to-blue-400 ml-1 animate-[blink_1s_infinite]"></span>
+                  <span className="inline-block w-[3px] h-[1em] bg-slate-900 dark:bg-white ml-1 animate-[blink_1s_infinite]"></span>
                 </div>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 mt-6 max-w-xl leading-relaxed">
