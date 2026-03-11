@@ -27,7 +27,7 @@ const Experience: React.FC = () => {
         location: "Remote",
         period: "Aug 2025 - Present",
         description: "I work as a Research Intern at NAAMII, focusing on Medical Image Analysis and Machine Learning Engineering. My work involves developing and applying deep learning models to solve real-world healthcare challenges.",
-        technologies: ["Python", "TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "Medical Imaging","ITK-Snap","3D Slicer"],
+        technologies: ["Computer Vision", "Machine Learning for Healthcare", "Medical AI"],
         achievements: [
           "Developed and optimized deep learning models for medical image segmentation and classification",
           "Collaborated with a multidisciplinary team of researchers and clinicians",
