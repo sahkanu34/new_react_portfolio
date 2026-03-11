@@ -33,7 +33,7 @@ const Experience: React.FC = () => {
           "Collaborated with a multidisciplinary team of researchers and clinicians",
           "Contributed to research publications and open-source projects in medical AI"
         ],
-        image: "https://www.naamii.org.np/wp-content/uploads/2023/02/naamii_logo.svg",
+        image: "https://www.naamii.org/logo.svg",
         link: "https://naamii.org.np/"
       },
     // {
