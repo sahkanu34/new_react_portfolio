@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 const companyLogos = [
   {
     name: "NAAMII",
-    src: "https://www.naamii.org.np/wp-content/uploads/2023/02/naamii_logo.svg",
+    src: "https://www.naamii.org/logo.svg",
     alt: "NAAMII Logo",
     href: "https://naamii.org.np/"
   },
