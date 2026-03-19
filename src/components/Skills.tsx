@@ -32,9 +32,9 @@ const Skills: React.FC = () => {
       icon: <Code size={24} className="text-purple-500" />,
       skills: [
         { name: "Python", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-        { name: "C", icon: <Code size={16} className="text-purple-500" />, image: "https://icon.icepanel.io/Technology/svg/C.svg" },
-        { name: "Java", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
-        { name: "C#", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+        // { name: "C", icon: <Code size={16} className="text-purple-500" />, image: "https://icon.icepanel.io/Technology/svg/C.svg" },
+        // { name: "Java", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+        // { name: "C#", icon: <Code size={16} className="text-purple-500" />, image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
         // { name: "JavaScript", icon: <Code size={16} className="text-purple-500" /> },
       ]
     },
