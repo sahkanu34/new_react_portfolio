@@ -6,7 +6,7 @@ const companyLogos = [
     name: "NAAMII",
     src: "https://www.naamii.org/logo.svg",
     alt: "NAAMII Logo",
-    href: "https://naamii.org.np/"
+    href: "https://www.naamii.org/about/team-and-leadership/suraj_sah_kanu"
   },
   // Add more companies here if needed
 ];
