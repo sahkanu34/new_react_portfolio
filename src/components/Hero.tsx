@@ -4,9 +4,9 @@ import { ArrowRight } from 'lucide-react';
 const companyLogos = [
   {
     name: "NAAMII",
-    src: "https://www.naamii.org.np/wp-content/uploads/2023/02/naamii_logo.svg",
+    src: "https://www.naamii.org/logo.svg",
     alt: "NAAMII Logo",
-    href: "https://naamii.org.np/"
+    href: "https://www.naamii.org/about/team-and-leadership/suraj_sah_kanu"
   },
   // Add more companies here if needed
 ];
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
             {/* Trusted and work in company logo section */}
             <div className="flex flex-col items-start mt-6">
               <span className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-2">
-              Trusted & worked in:
+              Trusted & Working in:
               </span>
               <div className="flex flex-row items-center gap-6">
               {companyLogos.map((company) => (
