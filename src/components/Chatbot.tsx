@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare } from 'lucide-react';
+import resumePdf from '../../docs/surajresume-5.pdf?url';
 
 // Animation helper for message fade-in
 const fadeInClass =
@@ -54,13 +55,15 @@ const navSections = [
   { label: 'Contact', href: '#contact' },
 ];
 
+const resumeLink = resumePdf;
+
 // FAQ: Most requested questions for the chatbot
 const faqs = [
   {
     question: "Can I see Suraj's resume?",
     answer: (
       <span>
-        You can <a href="https://ugc.production.linktr.ee/72bed503-c8ba-4295-a08b-3684f89b5e33_suraj.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
+        You can <a href={resumeLink} target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
       </span>
     ),
     trigger: "Show Resume"
@@ -380,7 +383,7 @@ const Chatbot: React.FC = () => {
     if (lower.includes('resume') || lower.includes('cv')) {
       return (
         <span>
-          You can <a href="https://ugc.production.linktr.ee/e31aec64-d3f1-4bd4-81fa-686ae2b9923c_surajresume--9---1--1.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
+          You can <a href={resumeLink} target="_blank" rel="noopener noreferrer" style={{ color: '#14b8a6', textDecoration: 'underline' }}>view or download Suraj's resume here</a>.
         </span>
       );
     }
