@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({ scrollY }) => {
         <div className="container mx-auto flex justify-between items-center">
           <a href="#home" className="text-2xl font-bold tracking-tight">
             <span className="bg-gradient-to-r from-teal-600 via-blue-600 to-purple-600 dark:from-teal-400 dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent font-cursive">
-              Suraj Sah Kanu
+              Suraj 
             </span>
           </a>
 
