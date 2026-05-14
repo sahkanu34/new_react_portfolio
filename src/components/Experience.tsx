@@ -19,23 +19,28 @@ const Experience: React.FC = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const experienceData: ExperienceItem[] = [
+const experienceData: ExperienceItem[] = [
     {
         id: 1,
-        position: "Research Intern (Medical Image Analysis & Machine Learning)",
+        position: "Research Intern – Machine Learning (MAPMED Lab)",
         company: "NAAMII (Nepal Applied Mathematics and Informatics Institute for Research)",
-        location: "Remote",
-        period: "Aug 2025 - Present",
-        description: "I work as a Research Intern at NAAMII, focusing on Medical Image Analysis and Machine Learning Engineering. My work involves developing and applying deep learning models to solve real-world healthcare challenges.",
-        technologies: ["Computer Vision", "Machine Learning for Healthcare", "Medical AI"],
+        location: "Kathmandu, Nepal",
+        period: "Aug 2024 – Apr 2026",
+        description: "Research intern at NAAMII's MAPMED Lab, focusing on medical image analysis and deep learning. Built end-to-end pipelines for 3D volumetric CT/MRI processing, embedding extraction, and automated clinical grading using state-of-the-art architectures.",
+        technologies: [
+          "PyTorch", "MedicalNet ResNet", "Foundational Models", "3D Image Processing",
+          "DICOM", "NIfTI", "Fine-Tuning Foundational Models", "scikit-learn", "PCA", "Deep Learning"
+        ],
         achievements: [
-          "Developed and optimized deep learning models for medical image segmentation and classification",
-          "Collaborated with a multidisciplinary team of researchers and clinicians",
-          "Contributed to research publications and open-source projects in medical AI"
+          "Built end-to-end medical image embedding extraction pipeline processing 3D volumetric CT/MRI scans using MedicalNet ResNet models, implementing global and ROI-based embeddings across 4 feature layers (256–2048 dims)",
+          "Engineered 3 fine-tuning strategies (partial, full, linear probe) for automated esophagitis grading using the RTOG dataset, achieving 92%+ validation accuracy via stratified k-fold cross-validation",
+          "Developed advanced 3D preprocessing pipeline with center-crop normalization, multi-scale augmentation, and NIfTI format conversion, reducing image processing overhead by 65% through batch automation",
+          "Created embedding analysis framework with PCA dimensionality reduction, contrastive similarity metrics, Isolation Forest outlier detection, and 16+ automated visualizations for quality assurance",
+          "Designed robust data utilities including CSV label merging, DICOM/NIfTI validation, cross-platform logging, and production-ready error handling — documented 15+ technical workflows for reproducible research"
         ],
         image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/src/components/NAAMII.png?raw=true",
         link: "https://naamii.org.np/"
-      },
+    },
     // {
     //   id: 2,
     //   position: "AI Research Assistant",
