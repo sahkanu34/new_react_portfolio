@@ -25,21 +25,21 @@ const Education: React.FC = () => {
       location: "Birgunj, Nepal",
       gpa: "3.24/4.0 *Current",
       period: "2022 - Present",
-      coursework: ["Database Management System", "Software Engineering", "Data Structure & Algorithms"],
+      coursework: ["Artifical Intelligence","Database Management System", "Software Engineering", "Data Structure & Algorithms"],
       image: "https://nationalinfotechcollege.edu.np/wp-content/uploads/2024/02/new-ni-logo.jpg",
       link: "https://nationalinfotechcollege.edu.np/"
     },
-    {
-      id: 2,
-      degree: "Grade XII",
-      institution: "Birgunj Public College",
-      location: "Birgunj, Nepal",
-      gpa: "3.20/4.0",
-      period: "2018 - 2021",
-      coursework: ["Economics", "Accounts", "Business Studies", "Mathematics"],
-      image: "https://bpcbirgunj.edu.np/wp-content/uploads/2020/07/WhatsApp-Image-2020-06-24-at-1.18.44-PM.jpeg",
-      link: "https://bpcbirgunj.edu.np/"
-    }
+    // {
+    //   id: 2,
+    //   degree: "Grade XII",
+    //   institution: "Birgunj Public College",
+    //   location: "Birgunj, Nepal",
+    //   gpa: "3.20/4.0",
+    //   period: "2018 - 2021",
+    //   coursework: ["Economics", "Accounts", "Business Studies", "Mathematics"],
+    //   image: "https://bpcbirgunj.edu.np/wp-content/uploads/2020/07/WhatsApp-Image-2020-06-24-at-1.18.44-PM.jpeg",
+    //   link: "https://bpcbirgunj.edu.np/"
+    // }
   ];
 
   useEffect(() => {

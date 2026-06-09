@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare } from 'lucide-react';
-import resumePdf from '../../docs/Suraj_Sah_Kanu_ML_Resume_ATS-1.pdf?url';
+import resumePdf from '../../docs/resume_updated-1.pdf';
 
 // Animation helper for message fade-in
 const fadeInClass =

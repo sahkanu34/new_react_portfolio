@@ -72,7 +72,7 @@ const About: React.FC = () => {
         <div className="flex flex-col gap-4 mb-16 items-center text-center">
           <p className="text-teal-600 dark:text-teal-400 font-semibold tracking-wider text-sm uppercase">👋 ABOUT ME</p>
           <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-200 dark:to-white bg-clip-text text-transparent">
-            ML Engineer & Researcher
+            ML Engineer | AI Engineer | Researcher
           </h2>
         </div>
 
@@ -90,18 +90,36 @@ const About: React.FC = () => {
                 Hello! I'm Suraj Sah Kanu
               </h3>
               <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
-                <p className="text-lg">
-                  I'm a passionate <span className="font-semibold text-teal-600 dark:text-teal-400">ML Engineer and Medical Imaging Researcher</span> with a deep commitment to leveraging artificial intelligence to solve real-world problems, particularly in healthcare and medical imaging.
-                </p>
-                <p>
-                  Currently working as a Research Intern at <span className="font-semibold text-teal-600 dark:text-teal-400">NAAMII</span> (Nepal Applied Mathematics and Informatics Institute for Research), I focus on developing cutting-edge deep learning models for medical image analysis. My work combines technical expertise with a genuine desire to make a positive impact on people's lives through technology.
-                </p>
-                <p>
-                  My journey in AI began with curiosity about how machines can learn and has evolved into a career dedicated to pushing the boundaries of what's possible with neural networks, computer vision, and data science. I specialize in building production-ready ML systems, from conception to deployment, using modern tools and best practices.
-                </p>
-                <p>
-                  When I'm not training models or debugging code, I'm exploring new AI research papers, contributing to open-source projects, or sharing knowledge with the developer community. I believe in the power of collaboration and continuous learning to drive innovation forward.
-                </p>
+<p className="text-lg">
+  I'm a passionate <span className="font-semibold text-teal-600 dark:text-teal-400">
+  ML Engineer and AI Researcher</span> specializing in Deep Learning, Generative AI, Retrieval-Augmented Generation (RAG),
+  and Agentic AI Systems, with a deep commitment to leveraging artificial intelligence to solve real-world problems,
+  particularly in healthcare and medical imaging.
+</p>
+
+<p>
+  I focus on developing cutting-edge deep learning models for medical image analysis. My work includes designing
+  production-ready AI systems such as medical imaging models, LLM-powered applications, intelligent document processing
+  pipelines, and end-to-end RAG systems.
+</p>
+
+<p>
+  I have experience in building AI Agents using LangChain and LangGraph, developing scalable workflows with vector databases
+  such as Qdrant, Pinecone, FAISS, and ChromaDB, and integrating LLMs for semantic search, information extraction, and
+  automated decision-making systems. I also work with MLOps practices, API development, and containerized deployments using
+  FastAPI, Docker, Kubernetes, AWS SageMaker, and CI/CD pipelines.
+</p>
+
+<p>
+  My journey in AI began with curiosity about how machines learn and has evolved into a career dedicated to pushing the
+  boundaries of neural networks, computer vision, and data science. I specialize in building production-ready ML systems
+  from conception to deployment, combining research-driven innovation with engineering best practices.
+</p>
+
+<p>
+  Outside of work, I actively explore new AI research papers, contribute to open-source projects, and engage with the developer
+  community. I believe in continuous learning, collaboration, and translating cutting-edge research into practical, real-world AI solutions.
+</p>
               </div>
             </div>
           </div>

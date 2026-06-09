@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
   const phrases = [
     'Machine Learning Engineer',
     'Deep Learning Engineer',
-    'AI & ML Researcher',
+    'AI Engineer',
     // 'Research Scientist',
     // 'AI Enthusiast',
     // 'Data Analyst',
@@ -98,7 +98,7 @@ const Hero: React.FC = () => {
             {/* Trusted and work in company logo section */}
             <div className="flex flex-col items-start mt-6">
               <span className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-2">
-              Trusted & Working in:
+              Trusted & Worked in:
               </span>
               <div className="flex flex-row items-center gap-6">
               {companyLogos.map((company) => (

@@ -13,77 +13,118 @@ interface Project {
 }
 
 const Projects: React.FC = () => {
-  const categories = ["All", "AI/ML Models", "Applications"];
+  const categories = ["All", "ML Models", "Fullstack", "AI Agents , RAG and LLM Systems"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const projects: Project[] = [
+
+  {
+  id: 0,
+  title: "AI Agentic Compliance Intelligence System",
+  description: "Multi-agent document intelligence system using LangGraph and GPT-4.1 to transform unstructured manufacturer PDFs into structured, audit-ready compliance reports for regulatory import workflows. Includes automated reasoning, reconciliation, and compliance mapping across heterogeneous documents.",
+  image: "images/Ai_agent.jpg",
+  technologies: [
+    "FastAPI",
+    "LangGraph",
+    "OpenAI GPT-4.1",
+    "Pydantic v2",
+    "PyMuPDF",
+    "pdfplumber",
+    "Multi-Agent Systems",
+    "NLP",
+    "Document Intelligence"
+  ],
+  repoLink: "https://github.com/sahkanu34/AI_Agent_Compliance_API",
+  category: "AI Agents , RAG and LLM Systems",
+},
+
+
+{
+  id: 1,
+  title: "RAG Backend – Conversational AI with Document Ingestion",
+  description: "Production-ready RAG backend system built with FastAPI supporting multi-turn conversational AI, custom retrieval pipeline, Redis-based memory, and vector search using Qdrant. Includes intelligent document ingestion, chunking strategies, and LLM-based structured data extraction.",
+  image: "images/RAG.jpg",
+  technologies: [
+    "FastAPI",
+    "OpenAI Embeddings",
+    "Qdrant",
+    "Redis",
+    "SQLAlchemy",
+    "RAG",
+    "Vector Databases",
+    "Docker",
+    "Python"
+  ],
+  repoLink: "https://github.com/sahkanu34/RAG_Backend_API",
+  category: "AI Agents , RAG and LLM Systems",
+},
     {
-      id: 0,
+      id: 2,
       title: "Yolov8 Object Detection for Brain Tumors",
       description: "Object detection system using Yolov8 to identify brain tumors in MRI images with real-time detection capabilities and visualization interface.",
       image: "https://ideogram.ai/assets/progressive-image/balanced/response/FZtNandBRjeifLWIn-r-fA",
       technologies: ["YOLOv8", "Ultralytics", "Object Detection", "PyTorch", "OpenCV", "Medical Imaging", "Streamlit"],
       // LiveDemo: "https://yolov8braintumor.streamlit.app/",
       repoLink: "https://github.com/sahkanu34/yolov8_object_detection",
-      category: "AI/ML Models",
+      category: "ML Models",
     },
     {
-      id: 1,
+      id: 3,
       title: "Market Basket Analysis - Unsupervised Learning",
       description: "Analysis of Walmart data to discover association rules and frequent itemsets using the Apriori algorithm.",
       image: "https://ideogram.ai/assets/image/lossless/response/O3em_UvJT6K9SuEfDlwRJA",
       technologies: ["Apriori", "Association Rules", "Data Mining", "Pandas", "Matplotlib", "Jupyter Notebook"],
       repoLink: "https://github.com/sahkanu34/Market_Basket_Analysis",
-      category: "AI/ML Models",
+      category: "ML Models",
     },
     {
-      id: 2,
+      id: 4,
       title: "HealthGuide Assistant AI",
       description: "AI health assistant using AWS Bedrock's Party Rock for real-time health guidance and support.",
       image: "https://ideogram.ai/assets/image/lossless/response/RAHoEuJpTf2A7oZ89fundA",
       technologies: ["AWS Bedrock", "Party Rock", "AI", "AWS Server", "Cloud Deployment"],
       LiveDemo: "https://partyrock.aws/u/sahkanu34/KiVXHJHU0/HealthGuide-AI",
-      category: "AI/ML Models",
+      category: "ML Models",
     },
     {
-      id: 3,
+      id: 5,
       title: "NeuroScan AI - Deep Learning",
       description: "CNN model detecting brain tumors from MRI scans with Streamlit web app integration.",
       image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/brain.jpeg?raw=true",
       technologies: ["CNN","MobileNetV2", "TensorFlow", "Keras", "Deep Learning", "Streamlit","Docker", "Latest"],
       LiveDemo: "https://brain-tumour-detection-wvdz.onrender.com",
       repoLink: "https://github.com/sahkanu34/Brain_tumour_detection_system",
-      category: "AI/ML Models",
+      category: "ML Models",
     },
+    // {
+    //   id: 6,
+    //   title: "Cancer Prediction App - Classification",
+    //   description: "ML app for cancer prediction with MLflow tracking and CI/CD deployment.",
+    //   image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/cancer.jpeg?raw=true",
+    //   technologies: ["Classification", "scikit-learn", "MLflow", "Docker", "Streamlit","Pandas","Plotly"],
+    //   LiveDemo: "https://cancerpredictionapp-34.streamlit.app",
+    //   repoLink: "https://github.com/sahkanu34/cancer_prediction_app",
+    //   category: "AI/ML Models",
+    // },
     {
-      id: 4,
-      title: "Cancer Prediction App - Classification",
-      description: "ML app for cancer prediction with MLflow tracking and CI/CD deployment.",
-      image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/cancer.jpeg?raw=true",
-      technologies: ["Classification", "scikit-learn", "MLflow", "Docker", "Streamlit","Pandas","Plotly"],
-      LiveDemo: "https://cancerpredictionapp-34.streamlit.app",
-      repoLink: "https://github.com/sahkanu34/cancer_prediction_app",
-      category: "AI/ML Models",
-    },
-    {
-      id: 5,
+      id: 7,
       title: "Blood Bank Management System (Raktasetu)",
       description: "Django-based blood donation management system with admin panel for donor-request coordination.",
       image: "https://ideogram.ai/assets/image/lossless/response/wuFPZptxSpygK8S4jcd1rw",
       technologies: ["CI/CD","Django", "MySQL", "Bootstrap", "PIL","Docker"],
       repoLink: "https://github.com/sahkanu34/Raktasetu",
-      category: "Applications",
+      category: "Fullstack",
     },
-    {
-      id: 6,
-      title: "Salary Prediction App - Regression",
-      description: "Experience-based salary prediction model with interactive web interface.",
-      image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
-      technologies: ["Regression", "scikit-learn", "Streamlit", "Docker", "Pandas","Plotly"],
-      LiveDemo: "https://salarypredictionapp34.streamlit.app/",
-      repoLink: "https://github.com/sahkanu34/salary_prediction_app",
-      category: "AI/ML Models",
-    },
+    // {
+    //   id: 8,
+    //   title: "Salary Prediction App - Regression",
+    //   description: "Experience-based salary prediction model with interactive web interface.",
+    //   image: "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+    //   technologies: ["Regression", "scikit-learn", "Streamlit", "Docker", "Pandas","Plotly"],
+    //   LiveDemo: "https://salarypredictionapp34.streamlit.app/",
+    //   repoLink: "https://github.com/sahkanu34/salary_prediction_app",
+    //   category: "AI/ML Models",
+    // },
   ];
 
   const filteredProjects = activeCategory === "All"
