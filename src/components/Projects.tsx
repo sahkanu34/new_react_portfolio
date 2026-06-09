@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
   id: 0,
   title: "AI Agentic Compliance Intelligence System",
   description: "Multi-agent document intelligence system using LangGraph and GPT-4.1 to transform unstructured manufacturer PDFs into structured, audit-ready compliance reports for regulatory import workflows. Includes automated reasoning, reconciliation, and compliance mapping across heterogeneous documents.",
-  image: "images/Ai_agent.jpg",
+  image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/Ai_agent.jpg?raw=true",
   technologies: [
     "FastAPI",
     "LangGraph",
@@ -43,7 +43,7 @@ const Projects: React.FC = () => {
   id: 1,
   title: "RAG Backend – Conversational AI with Document Ingestion",
   description: "Production-ready RAG backend system built with FastAPI supporting multi-turn conversational AI, custom retrieval pipeline, Redis-based memory, and vector search using Qdrant. Includes intelligent document ingestion, chunking strategies, and LLM-based structured data extraction.",
-  image: "images/RAG.jpg",
+  image: "https://github.com/sahkanu34/new_react_portfolio/blob/main/images/RAG.jpg?raw=true",
   technologies: [
     "FastAPI",
     "OpenAI Embeddings",
